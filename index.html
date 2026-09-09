@@ -1,100 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Caring Shades Childcare | Online Booking</title>
-<link rel="stylesheet" href="styles.css">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-<header class="header">
-  <div class="brand"><div class="logo">CS</div><div><strong>Caring Shades</strong><span>Childcare</span></div></div>
-  <nav><a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#booking">Book Now</a><a href="#faq">FAQ</a><button class="admin-btn" onclick="showAdmin()">Admin</button></nav>
-</header>
-
+<header class="header"><div class="brand"><div class="logo">CS</div><div><strong>Caring Shades</strong><span>Childcare</span></div></div><nav><a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#booking">Book Now</a><a href="#faq">FAQ</a><button class="admin-btn" onclick="showAdminLogin()">Admin</button></nav></header>
 <main id="mainSite">
-<section class="hero" id="home">
-  <div class="hero-text">
-    <p class="eyebrow">SAFE CARE. HAPPY KIDS. PEACE OF MIND.</p>
-    <h1>Trusted childcare at your home.</h1>
-    <p>Professional, caring childcare support for families across all parts of Harare. Book online in a few simple steps.</p>
-    <div class="hero-actions"><a class="btn" href="#booking">Book a Childcare Service</a><a class="btn secondary" href="https://wa.me/263772574395" target="_blank">WhatsApp Us</a></div>
-    <div class="trust"><span>✓ Every day</span><span>✓ All Harare</span><span>✓ From $4/hour</span></div>
-  </div>
-  <div class="hero-card"><div class="sun">♥</div><h3>Peace of mind starts here</h3><p>House-call childcare tailored to your family's needs.</p><strong>Minimum booking: 1 hour</strong></div>
-</section>
-
-<section id="services" class="section">
-<h2>Our Services</h2><p class="lead">Flexible childcare support designed around your family.</p>
-<div class="cards">
-<div class="card"><span>⏱</span><h3>Hourly Care</h3><p>Flexible childcare when you need support for a few hours.</p><b>$4/hour</b></div>
-<div class="card"><span>☀</span><h3>Day Care</h3><p>Childcare support throughout the day, including meals, play and homework.</p><b>$17/day</b></div>
-<div class="card"><span>★</span><h3>Night Care</h3><p>Reliable overnight childcare support for families who need it.</p><b>$25/night</b></div>
-<div class="card"><span>♥</span><h3>House-Call Care</h3><p>Care is provided at your home across all parts of Harare.</p><b>Book online</b></div>
-</div></section>
-
-<section id="pricing" class="section alt">
-<h2>Simple, Clear Pricing</h2>
-<div class="prices">
-<div><small>HOURLY</small><strong>$4</strong><span>per hour</span></div>
-<div><small>DAILY</small><strong>$17</strong><span>per day</span></div>
-<div><small>NIGHT</small><strong>$25</strong><span>per night</span></div>
-</div>
-<p class="policy-line"><b>Minimum booking:</b> 1 hour &nbsp; | &nbsp; <b>Payment:</b> EcoCash or cash</p>
-</section>
-
-<section id="booking" class="section">
-<h2>Book Online</h2><p class="lead">Complete the form below. Your request will be securely submitted online and given a unique booking reference.</p>
-<div class="booking-grid">
-<form id="bookingForm" class="form">
-<h3>1. Booking details</h3>
-<div class="grid2">
-<label>Service<select id="service" required><option value="">Select service</option><option value="Hourly">Hourly – $4/hour</option><option value="Daily">Daily – $17/day</option><option value="Night">Night – $25/night</option></select></label>
-<label>Date<input id="date" type="date" required></label>
-<label>Start time<input id="start" type="time" required></label>
-<label>End time<input id="end" type="time"></label>
-</div>
-<h3>2. Children</h3>
-<div class="grid2">
-<label>Number of children<input id="children" type="number" min="1" max="10" required></label>
-<label>Children's ages<input id="ages" placeholder="e.g. 2, 5, 8" required></label>
-</div>
-<h3>3. Parent / guardian</h3>
-<div class="grid2">
-<label>Full name<input id="name" required></label>
-<label>Phone / WhatsApp<input id="phone" required></label>
-<label>Email<input id="email" type="email" required></label>
-<label>Emergency contact<input id="emergency" required></label>
-</div>
-<label>Home address / area in Harare<input id="location" placeholder="Any area of Harare" required></label>
-<label>Allergies, medical or special requirements<textarea id="special" rows="3"></textarea></label>
-<label>Additional notes<textarea id="notes" rows="3"></textarea></label>
-<div class="estimate"><span>Estimated price</span><strong id="estimate">$0</strong></div>
-<p class="small">Payment method: EcoCash or cash. Cancellation requests should be made at least 3 days before the booking start date.</p>
-<button class="btn" type="submit">Submit Booking</button>
-</form>
-<div class="sidebox"><h3>How online booking works</h3><ol><li>Choose your service and date.</li><li>Enter the childcare and contact details.</li><li>Submit your booking request.</li><li>You receive a booking reference.</li><li>Caring Shades reviews and confirms the booking.</li></ol><div class="notice">Online booking is a request until Caring Shades confirms availability.</div><a class="whatsapp" href="https://wa.me/263772574395" target="_blank">Contact via WhatsApp</a></div>
-</div></section>
-
-<section id="faq" class="section alt"><h2>Frequently Asked Questions</h2>
-<div class="faq">
-<details><summary>What is the minimum booking time?</summary><p>The minimum booking is 1 hour.</p></details>
-<details><summary>How do I pay?</summary><p>Payment can be made by EcoCash or cash.</p></details>
-<details><summary>How much does childcare cost?</summary><p>Hourly care is $4/hour, daily care is $17/day and night care is $25/night.</p></details>
-<details><summary>Where do you operate?</summary><p>Caring Shades currently covers all parts of Harare.</p></details>
-<details><summary>Can I cancel my booking?</summary><p>Yes. Please cancel at least 3 days before the booking start date.</p></details>
-</div></section>
-</main>
-
-<div id="adminPanel" class="admin-panel hidden">
-<header class="admin-head"><div><h1>Caring Shades Admin Dashboard</h1><p>Manage online booking requests</p></div><button class="btn secondary" onclick="hideAdmin()">Back to Website</button></header>
-<div class="admin-stats"><div><small>TOTAL BOOKINGS</small><strong id="total">0</strong></div><div><small>PENDING</small><strong id="pending">0</strong></div><div><small>CONFIRMED</small><strong id="confirmed">0</strong></div><div><small>UPCOMING</small><strong id="upcoming">0</strong></div></div>
-<div class="admin-toolbar"><button class="btn" onclick="exportBookings()">Export Bookings</button><button class="btn secondary" onclick="signOutAdmin()">Sign Out</button></div>
-<div id="bookingList"></div>
-</div>
-
+<section class="hero" id="home"><div class="hero-text"><p class="eyebrow">SAFE CARE. HAPPY KIDS. PEACE OF MIND.</p><h1>Trusted childcare at your home.</h1><p>Professional, caring childcare support for families across all parts of Harare. Book online in a few simple steps.</p><div class="hero-actions"><a class="btn" href="#booking">Book a Childcare Service</a><a class="btn secondary" href="https://wa.me/263772574395" target="_blank" rel="noopener">WhatsApp Us</a></div><div class="trust"><span>✓ Every day</span><span>✓ All Harare</span><span>✓ From $4/hour</span></div></div><div class="hero-card"><div class="sun">♥</div><h3>Peace of mind starts here</h3><p>House-call childcare tailored to your family's needs.</p><strong>Minimum booking: 1 hour</strong></div></section>
+<section id="services" class="section"><h2>Our Services</h2><p class="lead">Flexible childcare support designed around your family.</p><div class="cards"><div class="card"><span>⏱</span><h3>Hourly Care</h3><p>Flexible childcare when you need support for a few hours.</p><b>$4/hour</b></div><div class="card"><span>☀</span><h3>Day Care</h3><p>Childcare support throughout the day, including meals, play and homework.</p><b>$17/day</b></div><div class="card"><span>★</span><h3>Night Care</h3><p>Reliable overnight childcare support for families who need it.</p><b>$25/night</b></div><div class="card"><span>♥</span><h3>House-Call Care</h3><p>Care is provided at your home across all parts of Harare.</p><b>Book online</b></div></div></section>
+<section id="pricing" class="section alt"><h2>Simple, Clear Pricing</h2><div class="prices"><div><small>HOURLY</small><strong>$4</strong><span>per hour</span></div><div><small>DAILY</small><strong>$17</strong><span>per day</span></div><div><small>NIGHT</small><strong>$25</strong><span>per night</span></div></div><p class="policy-line"><b>Minimum booking:</b> 1 hour &nbsp; | &nbsp; <b>Payment:</b> EcoCash or cash</p></section>
+<section id="booking" class="section"><h2>Book Online</h2><p class="lead">Submit your request and receive a unique booking reference. Caring Shades will review and confirm availability.</p><div class="booking-grid"><form id="bookingForm" class="form"><h3>1. Booking details</h3><div class="grid2"><label>Service<select id="service" required><option value="">Select service</option><option value="Hourly">Hourly – $4/hour</option><option value="Daily">Daily – $17/day</option><option value="Night">Night – $25/night</option></select></label><label>Start date<input id="start_date" type="date" required></label><label>End date<input id="end_date" type="date" required></label><label>Start time<input id="start_time" type="time" required></label><label>End time<input id="end_time" type="time"></label></div><h3>2. Children</h3><div class="grid2"><label>Number of children<input id="number_of_children" type="number" min="1" max="10" required></label><label>Children's ages<input id="children_ages" placeholder="e.g. 2, 5, 8" required></label></div><h3>3. Parent / guardian</h3><div class="grid2"><label>Full name<input id="parent_name" required></label><label>Phone / WhatsApp<input id="phone" required></label><label>Email<input id="email" type="email" required></label><label>Emergency contact<input id="emergency_contact" required></label></div><label>Home address / area in Harare<input id="location" placeholder="Any area of Harare" required></label><label>Allergies, medical or special requirements<textarea id="special_requirements" rows="3"></textarea></label><label>Additional notes<textarea id="notes" rows="3"></textarea></label><div class="estimate"><span>Estimated price</span><strong id="estimate">$0</strong></div><p class="small">Payment method: EcoCash or cash. Cancellation requests should be made at least 3 days before the booking start date.</p><button class="btn" type="submit">Submit Booking</button><div id="formError" class="error hidden"></div></form><div class="sidebox"><h3>How online booking works</h3><ol><li>Choose your service and dates.</li><li>Enter the childcare and contact details.</li><li>Submit your booking request.</li><li>You receive a booking reference.</li><li>Caring Shades reviews and confirms the booking.</li></ol><div class="notice">Online booking is a request until Caring Shades confirms availability.</div><a class="whatsapp" href="https://wa.me/263772574395" target="_blank" rel="noopener">Contact via WhatsApp</a></div></div></section>
+<section id="faq" class="section alt"><h2>Frequently Asked Questions</h2><div class="faq"><details><summary>What is the minimum booking time?</summary><p>The minimum booking is 1 hour.</p></details><details><summary>How do I pay?</summary><p>Payment can be made by EcoCash or cash.</p></details><details><summary>How much does childcare cost?</summary><p>Hourly care is $4/hour, daily care is $17/day and night care is $25/night.</p></details><details><summary>Where do you operate?</summary><p>Caring Shades currently covers all parts of Harare.</p></details><details><summary>Can I cancel my booking?</summary><p>Yes. Please cancel at least 3 days before the booking start date.</p></details></div></section></main>
+<div id="adminLogin" class="modal hidden"><div class="modal-card login-card"><button class="modal-close" onclick="hideAdminLogin()">×</button><h2>Admin Login</h2><p>Sign in to manage Caring Shades bookings.</p><form id="loginForm"><label>Email<input id="adminEmail" type="email" value="admin@caringshadeschildcare.com" required></label><label>Password<input id="adminPassword" type="password" required></label><button class="btn" type="submit">Sign In</button><div id="loginError" class="error hidden"></div></form></div></div>
+<div id="adminPanel" class="admin-panel hidden"><header class="admin-head"><div><h1>Caring Shades Admin Dashboard</h1><p>Manage online booking requests</p><p id="adminSignedIn"></p></div><div class="admin-head-actions"><button class="btn secondary" onclick="hideAdmin()">Back to Website</button><button class="btn" onclick="adminLogout()">Sign Out</button></div></header><div class="admin-stats"><div><small>TOTAL BOOKINGS</small><strong id="total">0</strong></div><div><small>PENDING</small><strong id="pending">0</strong></div><div><small>CONFIRMED</small><strong id="confirmed">0</strong></div><div><small>UPCOMING</small><strong id="upcoming">0</strong></div></div><div class="admin-toolbar"><button class="btn" onclick="exportBookings()">Export Bookings</button><button class="btn secondary" onclick="refreshBookings()">Refresh</button></div><div id="bookingList"></div></div>
 <div id="success" class="modal hidden"><div class="modal-card"><div class="success-icon">✓</div><h2>Booking Request Submitted</h2><p>Your booking reference is:</p><strong id="ref"></strong><p>Keep this reference for your records. Caring Shades will review the request and confirm availability.</p><button class="btn" onclick="closeSuccess()">Done</button></div></div>
-<script src="script.js"></script>
-</body>
-</html>
+<script src="script.js"></script></body></html>
